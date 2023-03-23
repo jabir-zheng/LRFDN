@@ -22,10 +22,10 @@ def select_model(args, device):
         model_path = os.path.join('model_zoo', 'team00_rfdn.pth')
         model = RFDN()
         model.load_state_dict(torch.load(model_path), strict=True)
-    elif model_id == 16:
-        from  models.team16_LRFDN import LRFDN
+    elif model_id == 30:
+        from  models.team30_LRFDN import LRFDN
         name, data_range = f"{model_id:02}_LRFDN", 1.0
-        model_path = os.path.join('model_zoo', 'team16_lrfdn.pth')
+        model_path = os.path.join('model_zoo', 'team30_lrfdn.pth')
         model = LRFDN()
         model.load_state_dict(torch.load(model_path), strict=True)
     else:
